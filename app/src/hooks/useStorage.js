@@ -5,7 +5,7 @@ export function useStorage() {
   const getItens = async (key) => {
     try {
       const password = await AsyncStorage.getItem(key);
-      if (itens) {
+      if (key) {
         return JSON.parse(password) || [];
       }
       return [];
